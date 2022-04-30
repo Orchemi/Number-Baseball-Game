@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mystrap.css">
+  <title>숫자야구</title>
+</head>
+<body class="bg-deepdark">
+
+  <!-- main 화면 -->
+  <section id="main" class="container flex-direction-column justify-content-center bg1 d-none">
+    <h1 class="title title-main my-5 text-bwhite">숫 자 야 구</h1>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-md m-3 bg-bwhite" id="newStartBtn">새 게임</button>
+      <button class="btn btn-md m-3 bg-bwhite" id="loadDataBtn">불러오기</button>
+    </div>
+  </section>
+
+  <!-- 플레이 화면 -->
+  <section id="playView" class="container d-none">
+    <article id="playPart">
+      <div class="goBtns m-3">
+        <button id="goHome" class="btn goBtn m-1">HOME</button>
+        <button id="goHelp" class="btn goBtn m-1">HELP</button>
+      </div>
+
+      <!-- 볼/스트라이크/아웃 표시 -->
+      <div id="noticeBoard"></div>
+
+      <!-- 이전 답이 나오는 부분 -->
+      <div id="showAnswer" class="d-flex justify-content-evenly">
+      </div>
+
+      <!-- 입력하는 부분 -->
+      <form id="myAnswerInput" class="d-flex justify-content-evenly my-5">
+        <button type="submit" class="d-none"></button>
+      </form>
+    </article>
+
+    <article class="d-flex flex-direction-column align-items-center" id="logPart">
+      <h2 class="title-2 text-dark" id="logTitle">HISTORY</h2>
+      <div id="logContainer" class="d-flex my-2">
+
+      </div>
+    </article>
+  </section>
+
+
+  <!-- 도움말 화면 -->
+  <section id="helpView" class="container flex-direction-column align-items-center d-none">
+    <h2 id="helpTitle">- 숫자야구 규칙 -</h2>
+    <ul id="helpLists">
+      <li >사용되는 숫자는 1부터 9까지의 서로 다른 숫자입니다.</li>
+      <hr>
+      <li>STRIKE &nbsp; 숫자와 위치가 전부 맞은 경우</li>
+      <li>BALL &nbsp;&nbsp;&nbsp;   숫자는 맞지만, 위치는 틀린 경우</li>
+      <li>OUT  &nbsp;&nbsp;&nbsp;&nbsp;   숫자와 위치가 전부 틀린 경우</li>
+    </ul>
+    <button id="closeHelpBtn" class="btn">닫기</button>
+  </section>
+    
+  <section id="answerView" class="container flex-direction-column align-items-center d-none">
+    <h1 id="answerViewTitle">정  답</h1>
+    <button id="closeAnswerBtn" class="btn">닫기</button>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
